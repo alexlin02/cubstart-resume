@@ -1,0 +1,223 @@
+/* General Set-up (Fonts, margins, background colors) */
+
+/* Question 0. Import a font and make all text in the body using that font. Check the homework instructions for more information!*/
+
+body {
+    margin: 50px auto;
+    max-width: 1000px;
+    color: #1d3557;
+    /* YOUR CODE HERE */
+}
+
+img {
+    border-radius: 100%;
+    width: 150px;
+    border: 4px solid #ff6565;
+    transition: ease-in-out 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 45px;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: ease-in-out 0.5s;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    transition: ease-in-out 0.5s;
+    padding: 10px
+}
+
+h2:hover {
+    background-color: #24a0ff;
+    color: white;
+    box-shadow: 0px 5px 10px 0px rgba(255, 0, 0, 0.5)
+}
+
+
+/* Question 1. Add a hover effect for your h1 tag and img tag! You can change the background-color, color, opacity, or anything you want.*/
+h1:hover {
+    background-color: #24a0ff;
+    color: white;
+    box-shadow: 0px 5px 10px 0px rgba(255, 0, 0, 0.5)
+}
+
+img:hover {
+    border: 8px solid #ff6565;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5)
+}
+
+
+
+/* Question 2. Add margin, padding, and borders to section tags! */
+section {
+    text-align: center;
+    /* border: 5px groove rgb(0, 126, 180); */
+    /*border-radius: 10%;             I don't like having these    */
+    padding: 5px;
+    margin: 10px;
+}
+
+
+
+/* Question 3. Add different background colors for all the different sections, by selecting them via ids. */
+
+/* YOUR CODE HERE */
+#education{
+    font-family: 'Space Grotesk', sans-serif;
+    transition: ease-in-out 0.3s;
+}
+
+#education:hover{
+    background-color: rgb(136, 223, 255);
+    box-shadow: 0px 5px 10px 0px rgba(255, 0, 0, 0.5)
+}
+
+#experience{
+    transition: ease-in-out 0.3s
+}
+
+#experience:hover{
+    background-color: rgb(14, 227, 234);
+    box-shadow: 0px 5px 10px 0px rgba(255, 0, 0, 0.5)
+}
+
+
+#contact{
+    transition: ease-in-out 0.3s;
+}
+
+#contact:hover{
+    background-color: rgb(58, 255, 137);
+    box-shadow: 0px 5px 10px 0px rgba(255, 0, 0, 0.5)
+}
+
+
+/* Experience Section */
+
+/* Question 4a. This is a little tougher! Use CSS Flexbox to display your experiences as shown in the diagram.
+ Hint: If you're stuck with finding values that work, check the homework instructions document for some help!*/
+
+.experience-wrapper {
+    font-family: 'Space Grotesk', sans-serif;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.experience-list-item {
+    /* Tip: Feel free to change anything here (e.g. border, background-color, etc.). 
+    Changing the padding and width might throws thiings off, but experiment with it and see what looks good. */
+    text-align: left;
+    width: 250px;
+    padding: 20px;
+    background-color: hsl(189, 100%, 75%);
+    margin: 25px;
+    position:relative;
+    top:0px;
+
+    /* Tip: Add the transition attribute to make effects look smoother! 
+    This means the hover effect will slowly kick in for 0.2s. */
+    transition: ease-in-out 0.2s;
+}
+
+
+
+/* Question 4b. Let's take a break! Add a hover effect to each experience-list-item div. 
+Experiment with border, border-radius, background-color, or whatever you want!*/
+
+.experience-list-item:hover {
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(255, 0, 0, 0.5);
+    position:relative;
+    top:5px;
+    transform: skew(1deg);
+}
+
+
+
+
+/* Projects Section */
+
+/* Question 5. Use CSS Flexbox or Grid and hover effects for the Projects Section, 
+but use different hover effects from the Experiences section! */
+.project-wrapper{
+    font-family: 'Space Grotesk', sans-serif;
+    gap: 10px;
+    display: flex;
+    flex-wrap:unset;
+    justify-content: center;
+    flex-shrink: 10;
+}
+
+.project-list-item{
+    background-color: #fdff8d;
+    transition: 0.3s;
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+    position:relative;
+}
+
+.project-list-item:hover{
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(255, 0, 0, 0.5);
+    transform: skew(-1deg);
+}
+
+#projects{
+    transition: ease-in-out 0.3s;
+    color: black
+}
+
+#projects:hover{
+    background-color: #f4ffc4;
+    box-shadow: 0px 5px 10px 0px rgba(255, 0, 0, 0.5);
+    color: red;
+}
+
+/* Contact Section */
+
+/* Question 6. Make your link pretty! */
+a {
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: #54b3d6;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+#contact{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+a:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
+}
+
+
+/* Question 7. Let's make this a little more mobile-friendly! Use a media query/breakpoint to make
+project-list-item and experience-list-item divs have a width of 100% for smaller devices.*/
+
+/* Small devices (portrait tablets and large phones, 600px screen and up) */
+@media only screen and (max-width: 600px) {
+    .experience-list-item{
+        width: 100%
+    }
+    .project-list-item{
+        width: 100%;
+    }
+    .project-wrapper{
+        font-family: 'Space Grotesk', sans-serif;
+        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
